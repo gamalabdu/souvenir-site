@@ -1,13 +1,54 @@
+
+@font-face {
+  font-family: 'Poppins-Black';
+  src: url('./assets/fonts/Poppins-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('./assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('./assets/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('./assets/fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('./assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Thin';
+  src: url('./assets/fonts/Poppins-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Extralight';
+  src: url('./assets/fonts/Poppins-ExtraLight.ttf');
+}
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  overflow-x: hidden;
+  overscroll-behavior: smooth;
+  background-color: black;
 }
+
+
+
+
+

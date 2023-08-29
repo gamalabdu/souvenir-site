@@ -1,0 +1,162 @@
+
+.about-container {
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: 'Poppins-Medium';
+}
+
+.about-inner {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: solid red 2px; */
+    height: 80%;
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    background-color: white;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items:first center;
+    gap: 10%;
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    font-family: "Poppins-Light";
+    /* border: solid blue 2px; */
+}
+
+
+.postcard {
+    background-color: white;
+    max-width: 80%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.lower-info {
+    margin-top: 10vmin;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.info {
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+.social-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 0px;
+    padding: 0 20px;
+    background-color: transparent;
+    /* border: solid green 2px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram-button, .vimeo-button {
+    font-size: 2.5vmin;
+    cursor: pointer;
+    font-family: 'Poppins-Light';
+    transition: font-family 300ms ease-in-out;
+    background-color: white;
+}
+
+.social-divider {
+    font-size: 2.5vmin;
+    font-family: 'Poppins-Light';
+    background-color: white;
+}
+   
+
+.instagram-button:hover {
+    font-family: 'Poppins-Bold';
+    transition: font-family .300ms ease-in-out;
+}
+
+.vimeo-button:hover {
+    font-family: 'Poppins-Bold';
+    transition: font-family .300ms ease-in-out;
+}
+
+
+@media (max-width: 786px) {
+
+    .postcard {
+        padding: 0;
+        max-width: 60%;
+    }
+
+    /* .lower-info {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    } */
+
+    .info {
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-inner {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: solid red 2px; */
+        height: 80%;
+        width: 100%;
+    }
+
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        gap: 10%;
+        width: 100%;
+        height: 30%;
+        /* border: solid blue 2px; */
+        background-color: transparent;
+        font-family: "Poppins-Light";
+    }
+     
+}

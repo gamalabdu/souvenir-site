@@ -1,0 +1,173 @@
+
+.work-page-container {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    /* border: solid red 2px; */
+    /* padding: 0 20%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: solid orange 2px; */
+}
+
+.inner-container-camp {
+    /* border: solid red 2px; */
+    /* padding: 0 20%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: solid orange 2px; */
+}
+
+.inner-inner {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: solid green 2px; */
+}
+
+.inner-video {
+    height: 100vmin;
+    width: 90vmin;
+}
+
+.inner-video-camp {
+    width: 100vmin;
+}
+
+.left-side {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* border: solid red 2px; */
+}
+
+.right-side {
+    width: 20%;
+    height: 100%;
+    color: white;
+    font-family: "Poppins-Extralight";
+    /* border: solid blue 2px; */
+    text-align: left;
+    padding: 1%;
+}
+
+.right-side-title {
+    font-family: "Poppins-Light";
+    font-size: 3vmin;
+}
+
+.description {
+    font-size: 1.5vmin;
+    color: gray
+}
+
+
+.bottom-text {
+    /* border: solid blue 2px; */
+    width: 100%;
+    height: 30%;
+    font-family: "Poppins-Thin";
+    font-size: 1.5vmin;
+}
+
+.inner-text {
+    color: white;
+    text-align: left;
+    padding: 0 10%;
+}
+
+.number-buttons {
+    /* color: white; */
+    color: gray;
+    font-family: "Poppins-Extralight";
+    /* border: solid red 2px; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+    height: 7%;
+}
+
+.the-buttons {
+    border: none;
+    /* color: white; */
+    color: gray;
+    font-family: "Poppins-Extralight";
+    cursor: pointer;
+}
+
+.choosen {
+    border: none;
+    color: white;
+    font-family: "Poppins-Extralight";
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+iframe {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+
+    .inner-container-camp {
+        display: flex;
+        flex-direction: column;
+        /* height: fit-content; */
+        width: 100%;
+        height: 100%;
+        /* border: solid orange 2px; */
+    }
+
+    .inner-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: solid green 2px; */
+    }
+
+    .left-side {
+        margin-top: 5vmin;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        /* border: solid red 2px; */
+    }
+    
+    .right-side {
+        width: 100%;
+        height: fit-content;
+        color: white;
+        font-family: "Poppins-Extralight";
+        /* border: solid blue 2px; */
+        text-align: center;
+    }
+
+    .description {
+        font-size: 2vmin;
+        padding: 0 15%;
+    }
+
+}
+    
