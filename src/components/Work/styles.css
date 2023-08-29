@@ -142,7 +142,8 @@
 
 
 .active {
-    color: #FBE999;
+    /* color: #FBE999; */
+    color: #ff1528;
     text-decoration: none;
     cursor: pointer;
     transition: all 300ms ease-in-out;

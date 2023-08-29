@@ -181,7 +181,7 @@ const Work = () => {
 			src: 'https://drive.google.com/uc?id=1jeQAwbEwLSYLgKJAY_CiG9JMrV2hbjbD',
 			thumbnail:
 				'https://drive.google.com/uc?id=1-BvHgmIL3FhfO9mtZrmOj9Zb478XAf0e',
-			vimeo: '',
+			vimeo: 'https://player.vimeo.com/video/859175764?h=9a1bf1e216&title=0&byline=0&portrait=0',
 			videos: [],
 		},
 

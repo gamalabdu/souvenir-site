@@ -4,14 +4,37 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const WorkPage = () => {
-	
+
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+	  const handleClickOutside = (event: MouseEvent) => {
+		const isInsideNumbers = (event.target as HTMLElement).closest('.number-buttons');
+		const isInsideVideo = (event.target as HTMLElement).closest('.video-container');
+      	const isInsideNav = (event.target as HTMLElement).closest('.nav-bar');
+      	const isInsideLogo = (event.target as HTMLElement).closest('.logo');
+
+  
+		if (!isInsideVideo && !isInsideNav && !isInsideLogo &&!isInsideNumbers) {
+		  navigate('/work');
+		}
+	  };
+  
+	  document.addEventListener('click', handleClickOutside);
+  
+	  return () => {
+		document.removeEventListener('click', handleClickOutside);
+	  };
+	}, [navigate]);
+  
+
+
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
 
 	const location = useLocation()
-
-	const navigate = useNavigate()
 
 	const state = location.state
 
