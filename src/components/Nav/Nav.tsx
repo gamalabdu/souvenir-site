@@ -8,8 +8,6 @@ const Nav = () => {
 
   const pageLocation = useLocation()
 
-  console.log(pageLocation.pathname)
-
   return (
     <div className='nav-bar'>
 
