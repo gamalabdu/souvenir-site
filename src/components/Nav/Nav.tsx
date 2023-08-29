@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <div className='nav-bar'>
 
-      <Link to="/home"><img className={pageLocation.pathname === '/home' ? 'logo-white' : 'logo'} src={ pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
+      <Link to="/home"><img className={pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'logo-white' : 'logo'} src={ pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
 
          <nav className='nav-container'>
 
