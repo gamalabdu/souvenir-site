@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './styles.css'
+import {motion} from 'framer-motion'
 
 const Home = () => {
 
@@ -19,8 +20,36 @@ const Home = () => {
 
     DynamicPage(title, description)
 
+    const fadeOut = {
+      hidden: {
+            opacity: 0,
+            y: 200,
+      },
+      show : {
+        opacity: 1,
+        y: 0,
+        transition: {
+          ease : 'easeInOut',
+          duration: 1.6,
+        }
+      },
+      exit : {
+        opacity: 0,
+        y: -200,
+        transition : {
+          ease : 'easeInOut',
+          duration: 1.6,
+        }
+      }
+    } 
+
 	return (
-		<div className='home-container'>
+		<motion.div className='home-container'
+    initial='hidden'
+    animate='show'
+    exit='exit'
+    variants={fadeOut}
+    >
 
             {/* <video className='enter-video' src='https://drive.google.com/uc?id=1axprrekHXCR37zxbzWCkc5uGbL2pedg1' 
             loop={true}
@@ -46,7 +75,7 @@ const Home = () => {
 					allowFullScreen></iframe>
 			</div>
 			<script src='https://player.vimeo.com/api/player.js'></script> */}
-		</div>
+		</motion.div>
 	)
 }
 

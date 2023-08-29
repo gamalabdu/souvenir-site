@@ -67,6 +67,14 @@
     background-color: white;
 }
 
+.mail-button {
+    font-family: "Poppins-Light";
+    text-decoration: underline;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
 
 .social-nav {
     display: flex;

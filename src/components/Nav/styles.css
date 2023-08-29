@@ -12,6 +12,18 @@
     mix-blend-mode: difference;
 }
 
+.nav-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    font-family: 'Poppins-Medium';
+    mix-blend-mode: difference;
+}
+
 .nav-bar-home {
     display: flex;
     flex-direction: row;

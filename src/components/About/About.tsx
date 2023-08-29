@@ -82,7 +82,8 @@ const About = () => {
           <br/>
           director 
           <br/>
-          minsoo@souvenir.media
+          <button className='mail-button' onClick={() => (window.location.href = 'mailto:minsoo@souvenir.media')}>minsoo@souvenir.media</button>
+          {/* minsoo@souvenir.media */}
         </div>
 
 				<div className='info'>
@@ -90,7 +91,8 @@ const About = () => {
           <br/>
           producer/director 
           <br/>
-          ted@souvenir.media
+          <button className='mail-button' onClick={() => (window.location.href = 'mailto:ted@souvenir.media')}>ted@souvenir.media</button>
+          {/* ted@souvenir.media */}
         </div>
 
       </div>
