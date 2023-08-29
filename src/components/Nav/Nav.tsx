@@ -1,14 +1,19 @@
 import React from 'react'
-import logo from '../../assets/logos/souvenir_white_spacing 0.png'
+import logoClear from '../../assets/logos/souvenir_white_spacing 0.png'
+import logoWhite from '../../assets/logos/souvenir_white_filled_hd copy.png'
 import './styles.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Nav = () => {
+
+  const pageLocation = useLocation()
+
+  console.log(pageLocation.pathname)
 
   return (
     <div className='nav-bar'>
 
-      <Link to="/home"><img className='logo' src={logo} /></Link>
+      <Link to="/home"><img className={pageLocation.pathname === '/home' ? 'logo-white' : 'logo'} src={ pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
 
          <nav className='nav-container'>
 

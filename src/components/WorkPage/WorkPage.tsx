@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const WorkPage = () => {
+	
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])

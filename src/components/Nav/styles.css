@@ -21,6 +21,17 @@
     background-color: transparent;
 }
 
+.logo-white {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 9vmin;
+    padding: 0 15px;
+    background-color: transparent;
+    margin-top: 5px;
+    margin-left: -10px;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
