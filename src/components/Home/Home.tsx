@@ -29,7 +29,7 @@ const Home = () => {
             muted
             /> */}
 
-          <video className='enter-video' src='https://drive.google.com/uc?id=1-D4tVxBcIZCP6JKHpYr1OOdsjqpvaz6H' 
+          <video className='enter-video' src='https://drive.google.com/uc?id=1Je6dMBJKiN5srMcFS-qFfcYdlKeoA9pF'          
             loop={true}
             preload='auto'                      
             autoPlay

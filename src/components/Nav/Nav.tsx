@@ -11,9 +11,9 @@ const Nav = () => {
   console.log(pageLocation.pathname)
 
   return (
-    <div className='nav-bar'>
+    <div className={ pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'nav-bar-home' : 'nav-bar'}>
 
-      <Link to="/home"><img className={ pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'logo-white' : 'logo'} src={ pageLocation.pathname === '/' || pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
+      <Link to="/home" style={{ backgroundColor:"transparent"}}><img className={ pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'logo-white' : 'logo'} src={ pageLocation.pathname === '/' || pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
 
          <nav className='nav-container'>
 
