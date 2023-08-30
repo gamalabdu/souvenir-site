@@ -1,8 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './styles.css'
 import {motion} from 'framer-motion'
 
 const Home = () => {
+
+  const vidref = useRef<HTMLVideoElement | null>(null);
+
+    useEffect(() => {
+      if (vidref.current) {
+        vidref.current.play();
+      }
+    }, []);
+
+
 
 
 	const title = 'Souvenier'
@@ -60,8 +70,9 @@ const Home = () => {
 
           <video className='enter-video' src='https://drive.google.com/uc?id=1Je6dMBJKiN5srMcFS-qFfcYdlKeoA9pF'          
             loop={true}
+            ref={vidref}
             preload='auto'                      
-            autoPlay={true}
+            autoPlay
             muted
             playsInline
             />
