@@ -160,6 +160,7 @@ iframe {
     .right-side {
         width: 100%;
         height: fit-content;
+        margin: 10px;
         color: white;
         font-family: "Poppins-Extralight";
         /* border: solid blue 2px; */
