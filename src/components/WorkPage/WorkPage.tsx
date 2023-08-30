@@ -159,7 +159,7 @@ const WorkPage = () => {
 							<div
 								style={{
 									fontFamily: 'Poppins-Extralight',
-									fontSize: '2vmin',
+									fontSize: '3vmin',
 									color: 'white',
 								}}>
 								{name.toLowerCase()}

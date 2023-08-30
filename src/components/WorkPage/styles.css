@@ -86,6 +86,7 @@
 .inner-text {
     color: white;
     text-align: left;
+    font-size: 1.5vmin;
     /* padding: 0 10%; */
 }
 
@@ -170,6 +171,10 @@ iframe {
     .description {
         font-size: 2vmin;
         padding: 0 15%;
+    }
+
+    .inner-text {
+        font-size: 2vmin;
     }
 
 }
