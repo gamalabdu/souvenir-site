@@ -4,19 +4,29 @@ import './styles.css'
 import { Link } from 'react-router-dom'
 
 const Work = () => {
+
 	const branded = [
 		{
-			name: 'Ahn Byeong Woong - Surf Live',
-			year: '2022',
-			color: 'Digital, Color, Black and White',
-			time: '15m 04s',
-			type: 'Campaign',
-			src: 'https://drive.google.com/uc?id=1u_SJfKg4CynlBgKEGBVQM_Ybc30NqJKU',
+			name: 'Sesinko',
+			names: [
+				`Sesinko x Air Jordan 1 Retro High`,
+				`Sesinko x Air Jordan 1 OG`,
+				`Sesinko x Air Max 1 Blueprint`,
+				`Sesinko x Air Force 1 ‘Little Acre’`,
+				`Sesinko x Air Jordan 1 Retro High ‘Heirloom’`,
+			],
+			title: 'sesinko x nike',
+			description: `Sesinko and Souvenir have worked closely over the past years delving into the sneaker scene of New York City. From the Bronx to Queens, our joint ventures have been spotlighting individuals who continually redefine creative boundaries, capturing their stories that celebrate both unity and innovation. `,
+			src: 'https://drive.google.com/uc?id=1fyBnf3cAYeI2HNvm0Ex0-ryrWwKaqfnR',
 			thumbnail:
-				'https://drive.google.com/uc?id=1CPGRAARXD4vI231tVD8fdntLj0Z16feP',
-			vimeo:
-				'https://player.vimeo.com/video/857290031?h=6333bcd679&title=0&byline=0&portrait=0',
-			videos: [],
+				'https://drive.google.com/uc?id=1e6BikLGElFwEMlqeqAtOCBlLB6MyBFlH',
+			vimeo: '',
+			videos: [
+				'https://player.vimeo.com/video/857293083?h=8df3d3c8a9&title=0&byline=0&portrait=0',
+				'https://player.vimeo.com/video/857292737?h=632ffb3a9d&title=0&byline=0&portrait=0',
+				'https://player.vimeo.com/video/857293765?h=a54352527a&title=0&byline=0&portrait=0',
+				'https://player.vimeo.com/video/857295544?h=0fcdbeb0b2&title=0&byline=0&portrait=0',
+			],
 		},
 		{
 			name: 'Atoms',
@@ -53,26 +63,17 @@ const Work = () => {
 			videos: [],
 		},
 		{
-			name: 'Sesinko',
-			names: [
-				`Sesinko x Air Jordan 1 Retro High`,
-				`Sesinko x Air Jordan 1 OG`,
-				`Sesinko x Air Max 1 Blueprint`,
-				`Sesinko x Air Force 1 ‘Little Acre’`,
-				`Sesinko x Air Jordan 1 Retro High ‘Heirloom’`,
-			],
-			title: 'sesinko x nike',
-			description: `Sesinko and Souvenir have worked closely over the past years delving into the sneaker scene of New York City. From the Bronx to Queens, our joint ventures have been spotlighting individuals who continually redefine creative boundaries, capturing their stories that celebrate both unity and innovation. `,
-			src: 'https://drive.google.com/uc?id=1fyBnf3cAYeI2HNvm0Ex0-ryrWwKaqfnR',
+			name: 'Ahn Byeong Woong - Surf Live',
+			year: '2022',
+			color: 'Digital, Color, Black and White',
+			time: '15m 04s',
+			type: 'Campaign',
+			src: 'https://drive.google.com/uc?id=1u_SJfKg4CynlBgKEGBVQM_Ybc30NqJKU',
 			thumbnail:
-				'https://drive.google.com/uc?id=1e6BikLGElFwEMlqeqAtOCBlLB6MyBFlH',
-			vimeo: '',
-			videos: [
-				'https://player.vimeo.com/video/857293083?h=8df3d3c8a9&title=0&byline=0&portrait=0',
-				'https://player.vimeo.com/video/857292737?h=632ffb3a9d&title=0&byline=0&portrait=0',
-				'https://player.vimeo.com/video/857293765?h=a54352527a&title=0&byline=0&portrait=0',
-				'https://player.vimeo.com/video/857295544?h=0fcdbeb0b2&title=0&byline=0&portrait=0',
-			],
+				'https://drive.google.com/uc?id=1CPGRAARXD4vI231tVD8fdntLj0Z16feP',
+			vimeo:
+				'https://player.vimeo.com/video/857290031?h=6333bcd679&title=0&byline=0&portrait=0',
+			videos: [],
 		},
 	]
 
@@ -215,19 +216,6 @@ const Work = () => {
 
 	const creativeShorts = [
 		{
-			name: 'Get Thee On The Dancefloor',
-			year: '2023',
-			color: "Digital, Color",
-			time:"26m 15s",
-			type: 'Creative Short',
-			src: 'https://drive.google.com/uc?id=1usN4nZybjlqCPnk1wYzKzq-eWKkGWv99',
-			thumbnail:
-				'https://drive.google.com/uc?id=1Nz2XTkN-rcHMdUG0iv2fem8Ml2UM2_US',
-			vimeo:
-				'https://player.vimeo.com/video/857246221?h=736d850762&title=0&byline=0&portrait=0',
-			videos: [],
-		},
-		{
 			name: 'Merlin',
 			year: '2022',
 			color: "Digital, Color",
@@ -241,15 +229,16 @@ const Work = () => {
 			videos: [],
 		},
 		{
-			name: 'Solacity',
+			name: 'Get Thee On The Dancefloor',
 			year: '2023',
 			color: "Digital, Color",
-			time:"1m 13s",
+			time:"26m 15s",
 			type: 'Creative Short',
-			src: 'https://drive.google.com/uc?id=1meAOv6AB9PQT61JyC8B3A-QjZ5I4s2_W',
+			src: 'https://drive.google.com/uc?id=1usN4nZybjlqCPnk1wYzKzq-eWKkGWv99',
 			thumbnail:
-				'https://drive.google.com/uc?id=10cRz6F5Wza8F6_ZqQeUcP93klsg-D462',
-			vimeo: '',
+				'https://drive.google.com/uc?id=1Nz2XTkN-rcHMdUG0iv2fem8Ml2UM2_US',
+			vimeo:
+				'https://player.vimeo.com/video/857246221?h=736d850762&title=0&byline=0&portrait=0',
 			videos: [],
 		},
 		{
@@ -263,6 +252,18 @@ const Work = () => {
 				'https://drive.google.com/uc?id=1k2CByvhq189ensAxMHNtmvBBJlnDNdjc',
 			vimeo:
 				'https://player.vimeo.com/video/857333532?h=a484eabe97&title=0&byline=0&portrait=0',
+			videos: [],
+		},
+		{
+			name: 'Solacity',
+			year: '2023',
+			color: "Digital, Color",
+			time:"1m 13s",
+			type: 'Creative Short',
+			src: 'https://drive.google.com/uc?id=1meAOv6AB9PQT61JyC8B3A-QjZ5I4s2_W',
+			thumbnail:
+				'https://drive.google.com/uc?id=10cRz6F5Wza8F6_ZqQeUcP93klsg-D462',
+			vimeo: '',
 			videos: [],
 		},
 	]

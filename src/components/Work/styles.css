@@ -186,8 +186,8 @@ ul {
     height: 30px;
     border: 3px solid transparent;
     border-radius: 50%;
-    /* border-right-color: rgba(255, 255, 255, 0.7); */
-    border-right-color: rgba(255, 255, 113, 0.7);
+    /* border-right-color: rgba(255, 255, 113, 0.7); */
+    border-right-color: rgba(255, 47, 50, 0.7);
     animation: spinner-anim 0.8s linear infinite;
   }
   
