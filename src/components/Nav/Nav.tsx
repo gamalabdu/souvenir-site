@@ -8,8 +8,6 @@ const Nav = () => {
 
   const pageLocation = useLocation()
 
-  console.log(pageLocation.pathname)
-
   return (
     <div className={ pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'nav-bar-home' : pageLocation.pathname === '/about' ? 'nav-about' : 'nav-bar'}>
 
