@@ -434,7 +434,7 @@ const Work = () => {
 									onMouseEnter={() => onHover(idx)}
 									onMouseLeave={onLeave}
 									key={idx}>
-									<Link key={idx} to='/item' state={{ item }}>
+									<Link key={idx} to={`/work/${encodeURIComponent(item.name)}`} state={{ item }}>
 										<video
 											ref={(video) => (videoRefs.current[idx] = video)}
 											className={`box-video ${isHovered ? 'visible' : ''}`}
