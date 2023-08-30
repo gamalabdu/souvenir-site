@@ -116,8 +116,17 @@
     transition: font-family .300ms ease-in-out;
 }
 
+@media screen and (max-height: 700px) {
 
-@media (max-width: 786px) {
+    .postcard {
+        padding: 0;
+        max-height: 80%;
+    }
+    
+}
+
+
+@media screen and (max-width: 786px){
 
     .postcard {
         padding: 0;
