@@ -73,6 +73,7 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    -webkit-text-fill-color: black;
 }
 
 

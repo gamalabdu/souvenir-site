@@ -61,8 +61,9 @@ const Home = () => {
           <video className='enter-video' src='https://drive.google.com/uc?id=1Je6dMBJKiN5srMcFS-qFfcYdlKeoA9pF'          
             loop={true}
             preload='auto'                      
-            autoPlay
+            autoPlay={true}
             muted
+            playsInline
             />
 
 
