@@ -1,6 +1,6 @@
 import React from 'react'
-import logoClear from '../../assets/logos/souvenir_white_spacing 0.png'
-import logoWhite from '../../assets/logos/souvenir_white_filled_hd copy.png'
+import logoClear from '../../assets/logos/souvenir_white stroke_cropped.png'
+import logoWhite from '../../assets/logos/souvenir_white filled_cropped.png'
 import './styles.css'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -13,7 +13,7 @@ const Nav = () => {
   return (
     <div className={ pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'nav-bar-home' : pageLocation.pathname === '/about' ? 'nav-about' : 'nav-bar'}>
 
-      <Link to="/home" style={{ backgroundColor:"transparent"}}><img className={ pageLocation.pathname === '/' || pageLocation.pathname === '/home'   ? 'logo-white' : 'logo'} src={ pageLocation.pathname === '/' || pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
+      <Link to="/home" style={{ backgroundColor:"transparent"}}><img className='logo' src={ pageLocation.pathname === '/' || pageLocation.pathname === '/home' ? logoWhite : logoClear } /></Link>
 
          <nav className='nav-container'>
 

@@ -4,12 +4,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* position: absolute;
-    z-index: 50; */
+    position: absolute;
+    z-index: 50;
     background-color: transparent;
     width: 100%;
     font-family: 'Poppins-Medium';
     mix-blend-mode: difference;
+    padding: 10px;
 }
 
 .nav-about {
@@ -22,6 +23,7 @@
     width: 100%;
     font-family: 'Poppins-Medium';
     mix-blend-mode: difference;
+    padding: 10px;
 }
 
 .nav-bar-home {
@@ -35,18 +37,19 @@
     width: 100%;
     font-family: 'Poppins-Medium';
     color: white;
+    padding: 10px;
 }
 
 .logo {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10vmin;
-    padding: 0 10px;
+    height: 7vmin;
+    padding: 0 0px;
     background-color: transparent;
 }
 
-.logo-white {
+/* .logo-white {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,7 +58,7 @@
     background-color: transparent;
     margin-top: 5px;
     margin-left: -10px;
-}
+} */
 
 .nav-container {
     display: flex;
