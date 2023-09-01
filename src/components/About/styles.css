@@ -95,7 +95,7 @@
     font-size: 2.5vmin;
     cursor: pointer;
     font-family: 'Poppins-Light';
-    transition: font-family 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
     background-color: white;
 }
 
@@ -107,13 +107,17 @@
    
 
 .instagram-button:hover {
-    font-family: 'Poppins-Bold';
-    transition: font-family .300ms ease-in-out;
+    /* font-family: 'Poppins-Bold'; */
+    font-weight: bolder;
+    scale: calc(1.1);
+    transition: all .300ms ease-in-out;
 }
 
 .vimeo-button:hover {
-    font-family: 'Poppins-Bold';
-    transition: font-family .300ms ease-in-out;
+    /* font-family: 'Poppins-Bold'; */
+    font-weight: bolder;
+    scale: calc(1.1);
+    transition: all .300ms ease-in-out;
 }
 
 @media screen and (max-height: 700px) {

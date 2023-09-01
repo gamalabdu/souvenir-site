@@ -83,16 +83,14 @@ const About = () => {
           director 
           <br/>
           <button className='mail-button' onClick={() => (window.location.href = 'mailto:minsoo@souvenir.media')}>minsoo@souvenir.media</button>
-          {/* minsoo@souvenir.media */}
         </div>
 
 				<div className='info'>
           Ted Kim 
           <br/>
-          producer/director 
+          producer 
           <br/>
           <button className='mail-button' onClick={() => (window.location.href = 'mailto:ted@souvenir.media')}>ted@souvenir.media</button>
-          {/* ted@souvenir.media */}
         </div>
 
       </div>
