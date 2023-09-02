@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -13,16 +13,18 @@ function App() {
 
   const location = useLocation();
 
+  const [choice, setChoice] = useState<string>('campaign')
+
 
   return (
-    
+
     <div className="App">
       <AnimatePresence initial={false} mode='wait'>
        <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Main/>} >
             <Route index element={<Home/>} />
             <Route path='home' element={<Home/>} />
-            <Route path='work' element={<Work />}/>
+            <Route path='work' element={ <Work choice={choice} setChoice={setChoice} />} />
             <Route path='work/:name' element={<WorkPage />} />
             <Route path='about' element={<About/>} />
           </Route>

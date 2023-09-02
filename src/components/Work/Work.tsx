@@ -1,9 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import './styles.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-const Work = () => {
+
+interface IWorkProps {
+	choice: string,
+	setChoice: Function
+}
+
+const Work = (props: IWorkProps) => {
+
+	const { choice, setChoice } = props 
 
 	const branded = [
 		{
@@ -111,7 +119,7 @@ const Work = () => {
 			color: "Digital, Color",
 			time:"3m 32s",
 			type: 'Music Video',
-			src: 'https://drive.google.com/uc?id=1y0h0vPbIEs3g04x-lntomPCAoxfLoKGx',
+			src: 'https://drive.google.com/uc?id=1gISbu7GdvxQiIA1WdVSTZoOtwL5Oe8UR',
 			thumbnail:
 				'https://drive.google.com/uc?id=1GbJSkoSOSUVtzrUTvodghgqDvnR2Pog_',
 			vimeo:
@@ -268,9 +276,6 @@ const Work = () => {
 		},
 	]
 
-	const location = useLocation();
-    const navigate = useNavigate();
-
 
 	const title = 'Work'
 	const description = 'Explore the works'
@@ -287,30 +292,26 @@ const Work = () => {
 
 	DynamicPage(title, description)
 
-	const initialChoice = localStorage.getItem('choice') || 'campaign';
-
-	const [choice, setChoice] = useState<string>(initialChoice)
-
-	const [loadedData, setLoadedData] = useState<
-		{ name: string; src: string; thumbnail: string }[]
-	>([...branded])
 
 	const [isLoading, setIsLoading] = useState(true)
 
-	const handleChoice = (choice: string) => {
-		if (choice === 'campaign') {
-			setChoice('campaign')
-			setLoadedData([...branded])
-		} else if (choice === 'music videos') {
-			setChoice('music videos')
-			setLoadedData([...musicVideos])
-		} else if (choice === 'creative shorts') {
-			setChoice('creative shorts')
-			setLoadedData([...creativeShorts])
-		}
+	const initialData = choice === 'campaign' ? [...branded] : choice === 'music videos' ? [...musicVideos] : choice === 'creative shorts' ? [...creativeShorts] : [];
 
-		localStorage.setItem('choice', choice);
-	}
+	const [loadedData, setLoadedData] = useState< { name: string; src: string; thumbnail: string }[]> (initialData)
+
+	const handleChoice = (selectedChoice : string) => {
+
+		setChoice(selectedChoice); // Update the choice state
+	
+		// Update the loadedData based on the selected choice
+		if (selectedChoice === 'campaign') {
+		  setLoadedData([...branded]);
+		} else if (selectedChoice === 'music videos') {
+		  setLoadedData([...musicVideos]);
+		} else if (selectedChoice === 'creative shorts') {
+		  setLoadedData([...creativeShorts]);
+		}
+	  };
 
 	useEffect(() => {
 		setIsLoading(true)
@@ -319,6 +320,7 @@ const Work = () => {
 			setIsLoading(false)
 		}, 2000)
 	}, [choice])
+
 
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 

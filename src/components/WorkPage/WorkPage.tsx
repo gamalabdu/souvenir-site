@@ -10,10 +10,12 @@ const WorkPage = () => {
   const location = useLocation();
   const state = location.state;
 
+  
 
 	useEffect(() => {
-		
+
 	  const handleClickOutside = (event: MouseEvent) => {
+
 		const isInsideNumbers = (event.target as HTMLElement).closest('.number-buttons');
 		const isInsideVideo = (event.target as HTMLElement).closest('.video-container');
       	const isInsideNav = (event.target as HTMLElement).closest('.nav-bar');
@@ -57,10 +59,6 @@ const WorkPage = () => {
 
 	if (state.item.names) {
 		names = [...state.item.names]
-	}
-
-	const backToWork = () => {
-		navigate('/works')
 	}
 
 	const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
