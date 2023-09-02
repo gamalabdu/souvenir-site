@@ -33,8 +33,11 @@
 
 .right {
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
-    align-items:first center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
     gap: 10%;
     width: 40%;
     height: 100%;
