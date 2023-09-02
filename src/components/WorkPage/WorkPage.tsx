@@ -6,9 +6,13 @@ import { motion } from 'framer-motion'
 const WorkPage = () => {
 
 
-	const navigate = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const state = location.state;
+
 
 	useEffect(() => {
+		
 	  const handleClickOutside = (event: MouseEvent) => {
 		const isInsideNumbers = (event.target as HTMLElement).closest('.number-buttons');
 		const isInsideVideo = (event.target as HTMLElement).closest('.video-container');
@@ -17,7 +21,7 @@ const WorkPage = () => {
 
   
 		if (!isInsideVideo && !isInsideNav && !isInsideLogo &&!isInsideNumbers) {
-		  navigate('/work');
+			navigate('/work');
 		}
 	  };
   
@@ -34,9 +38,6 @@ const WorkPage = () => {
 		window.scrollTo(0, 0)
 	}, [])
 
-	const location = useLocation()
-
-	const state = location.state
 
 	const video = state.item.vimeo
 	const name = state.item.name

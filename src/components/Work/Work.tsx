@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import './styles.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Work = () => {
 
@@ -268,6 +268,10 @@ const Work = () => {
 		},
 	]
 
+	const location = useLocation();
+    const navigate = useNavigate();
+
+
 	const title = 'Work'
 	const description = 'Explore the works'
 
@@ -283,7 +287,9 @@ const Work = () => {
 
 	DynamicPage(title, description)
 
-	const [choice, setChoice] = useState<string>('campaign')
+	const initialChoice = localStorage.getItem('choice') || 'campaign';
+
+	const [choice, setChoice] = useState<string>(initialChoice)
 
 	const [loadedData, setLoadedData] = useState<
 		{ name: string; src: string; thumbnail: string }[]
@@ -302,6 +308,8 @@ const Work = () => {
 			setChoice('creative shorts')
 			setLoadedData([...creativeShorts])
 		}
+
+		localStorage.setItem('choice', choice);
 	}
 
 	useEffect(() => {
