@@ -73,6 +73,7 @@ const Home = () => {
 				className='enter-video'
 				src={frontPageReel}
 				loop={true}
+				controls={false}
 				// ref={vidref}
 				preload='auto'
 				autoPlay={true}
