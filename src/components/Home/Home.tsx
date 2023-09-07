@@ -75,9 +75,9 @@ const Home = () => {
 				loop={true}
 				// ref={vidref}
 				preload='auto'
-				autoPlay
-				muted
-				playsInline
+				autoPlay={true}
+				muted={true}
+				playsInline={true}
 			/>
 		</motion.div>
 	)
