@@ -6,11 +6,11 @@ import frontPageReel from '../../assets/videos/frontpagereel.mov'
 const Home = () => {
 	const vidref = useRef<HTMLVideoElement | null>(null)
 
-	// useEffect(() => {
-	// 	if (vidref.current) {
-	// 		vidref.current.play()
-	// 	}
-	// }, [])
+	useEffect(() => {
+		if (vidref.current) {
+			vidref.current.play()
+		}
+	}, [])
 
 	const title = 'Souvenier'
 	const description = 'Explore the works'
@@ -74,7 +74,7 @@ const Home = () => {
 				src={frontPageReel}
 				loop={true}
 				controls={false}
-				// ref={vidref}
+				ref={vidref}
 				preload='auto'
 				autoPlay={true}
 				muted={true}
