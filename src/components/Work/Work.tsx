@@ -271,7 +271,7 @@ const Work = (props: IWorkProps) => {
 			src: 'https://drive.google.com/uc?id=1meAOv6AB9PQT61JyC8B3A-QjZ5I4s2_W',
 			thumbnail:
 				'https://drive.google.com/uc?id=10cRz6F5Wza8F6_ZqQeUcP93klsg-D462',
-			vimeo: '',
+			vimeo: 'https://player.vimeo.com/video/858799324?h=124eb5b226&title=0&byline=0&portrait=0',
 			videos: [],
 		},
 	]
@@ -313,12 +313,15 @@ const Work = (props: IWorkProps) => {
 		}
 	  };
 
+
 	useEffect(() => {
+
 		setIsLoading(true)
 
 		setTimeout(() => {
 			setIsLoading(false)
 		}, 2000)
+
 	}, [choice])
 
 
@@ -350,6 +353,9 @@ const Work = (props: IWorkProps) => {
 			}
 		})
 	}, [hoveredIndex])
+
+
+	
 
 	const videoItem = {
 		hidden: {
