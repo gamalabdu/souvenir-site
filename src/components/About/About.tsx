@@ -60,7 +60,7 @@ const About = () => {
   return (
 
 
-		<motion.body className='about-container'
+		<motion.div className='about-container'
     initial="hidden"
     animate='show'
     exit='exit'
@@ -135,7 +135,7 @@ const About = () => {
 
 </nav>
 
-		</motion.body>
+		</motion.div>
 	)
 }
 

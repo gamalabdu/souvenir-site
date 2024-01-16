@@ -2,14 +2,25 @@ import React, { useEffect, useState } from 'react'
 import './styles.css'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { IWork } from '../models/IWork'
+import { NumberButtons } from './NumberButtons/NumberButtons'
+
+
 
 const WorkPage = () => {
+
 
 
   const navigate = useNavigate();
   const location = useLocation();
   const state = location.state;
 
+
+  useEffect(() => {
+
+	window.scrollTo(0, 0)
+
+}, [])
   
 
 	useEffect(() => {
@@ -31,57 +42,34 @@ const WorkPage = () => {
   
 	  return () => {
 		document.removeEventListener('click', handleClickOutside);
-	  };
+	  }
+
 	}, [navigate]);
   
 
 
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [])
-
-
-	const video = state.item.vimeo
-	const name = state.item.name
-	const title = state.item.title
-	const description = state.item.description
-	const year = state.item.year
-	const color = state.item.color
-	const time = state.item.time
-	const type = state.item.type
-
-	let videos: any[] = []
-	let names : string[] = []
-
-	if (state.item.videos) {
-		videos = [...state.item.videos]
-	}
-
-	if (state.item.names) {
-		names = [...state.item.names]
-	}
+	const [ selectedWork, setSelectedWork ] = useState<IWork>()
 
 	const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
 
-	const NumberButtons = () => {
-		return (
-			<div className='number-buttons'>
-				<div>{names[currentVideoIndex].toLowerCase()}</div>
-				<div className='numbers'>
-					{videos.map((_, index) => (
-						<button
-							className={
-								index === currentVideoIndex ? 'choosen' : 'the-buttons'
-							}
-							key={index}
-							onClick={() => setCurrentVideoIndex(index)}>
-							{index + 1}
-						</button>
-					))}
-				</div>
-			</div>
-		)
-	}
+
+	useEffect( () => {
+
+		if (state && state.item) {
+		  setSelectedWork(state.item);
+		}
+
+	  }, [state]);
+	
+
+
+
+	  if (!selectedWork) {
+		return null; // or display loading, error, or a placeholder component
+	  }
+
+
+
 
 	const fadeOut = {
 		hidden: {
@@ -113,7 +101,10 @@ const WorkPage = () => {
 			animate='show'
 			exit='exit'
 			variants={fadeOut}>
-			{videos.length != 0 ? (
+			{
+			
+			selectedWork.videos ? (
+
 				<div className='inner-container-camp'>
 					<div className='inner-inner'>
 						<div className='left-side'>
@@ -125,7 +116,7 @@ const WorkPage = () => {
 									transition={{
 										duration: 0.5,
 									}}
-									src={videos[currentVideoIndex]}
+									src={selectedWork.videos[currentVideoIndex]}
 									style={{
 										position: 'absolute',
 										top: '0',
@@ -133,23 +124,27 @@ const WorkPage = () => {
 										width: '100%',
 										height: '97%',
 									}}
-									allow='autoplay; fullscreen; picture-in-picture'
-									allowFullScreen></motion.iframe>
+									// allow='autoplay; fullscreen; picture-in-picture'
+									allowFullScreen
+								>
+								</motion.iframe>
 							</div>
-							<NumberButtons />
+							<NumberButtons selectedWork={selectedWork} currentVideoIndex={currentVideoIndex} setCurrentVideoIndex={setCurrentVideoIndex} />
 						</div>
 
 						<div className='right-side'>
-							<div className='right-side-title'>{name}</div>
+							<div className='right-side-title'>{selectedWork.name}</div>
 							<br />
-							<div className='description'>{description}</div>
+							<div className='description'>{selectedWork.description}</div>
 						</div>
 					</div>
 				</div>
+
 			) : (
+
 				<div className='inner-container'>
 					<iframe
-						src={video}
+						src={selectedWork.vimeo}
 						className='inner-video'
 						allow='autoplay; fullscreen; picture-in-picture'></iframe>
 					<script src='https://player.vimeo.com/api/player.js'></script>
@@ -161,17 +156,21 @@ const WorkPage = () => {
 									fontSize: '3vmin',
 									color: 'white',
 								}}>
-								{name.toLowerCase()}
+								{selectedWork.name.toLowerCase()}
 							</div>
 							<br />
-							<div> {year.toLowerCase()} </div>
-							<div> {color.toLowerCase()} </div>
-							<div> {time.toLowerCase()} </div>
-							<div> {type.toLowerCase()} </div>
+							<div> {selectedWork.year.toLowerCase()} </div>
+							<div> {
+							selectedWork.color
+							// .toLowerCase()
+							} </div>
+							<div> {selectedWork.time.toLowerCase()} </div>
+							<div> {selectedWork.type.toLowerCase()} </div>
 						</div>
 					</div>
 				</div>
 			)}
+
 		</motion.div>
 	)
 }
