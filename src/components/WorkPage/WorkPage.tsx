@@ -15,6 +15,8 @@ const WorkPage = () => {
   const location = useLocation();
   const state = location.state;
 
+  console.log(state)
+
 
   useEffect(() => {
 

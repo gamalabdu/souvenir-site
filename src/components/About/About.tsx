@@ -85,13 +85,13 @@ const About = () => {
           <button className='mail-button' onClick={() => (window.location.href = 'mailto:minsoo@souvenir.media')}>minsoo@souvenir.media</button>
         </div>
 
-				<div className='info'>
+				{/* <div className='info'>
           Ted Kim 
           <br/>
           producer 
           <br/>
           <button className='mail-button' onClick={() => (window.location.href = 'mailto:ted@souvenir.media')}>ted@souvenir.media</button>
-        </div>
+        </div> */}
 
       </div>
 
